@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Jordy Oliver Flores Loayza</title>
+    <meta
+      name="description"
+      content="Portfolio de Jordy Oliver Flores Loayza, estudiante de Ingenieria de Sistemas de Informacion con experiencia en ciberseguridad, analisis de datos y desarrollo de software."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #162027;
+        --muted: #607078;
+        --line: #d9e0e3;
+        --paper: #f6f3ed;
+        --surface: #ffffff;
+        --surface-2: #eef6f5;
+        --accent: #126b67;
+        --accent-dark: #0c4b49;
+        --signal: #b84f37;
+        --gold: #c4943b;
+        --shadow: 0 18px 45px rgba(22, 32, 39, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(217, 224, 227, 0.9);
+        background: rgba(246, 243, 237, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 68px;
+      }
+
+      .brand {
+        color: var(--ink);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        padding: 64px 0 42px;
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(90deg, rgba(246, 243, 237, 0.95), rgba(246, 243, 237, 0.72)),
+          url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=80")
+            center / cover;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.62fr);
+        gap: 34px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--accent);
+        font-size: 0.84rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 860px;
+        margin-bottom: 16px;
+        font-size: clamp(2.6rem, 5vw, 5.2rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .role {
+        margin-bottom: 22px;
+        color: var(--signal);
+        font-size: clamp(1.08rem, 2vw, 1.45rem);
+        font-weight: 800;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+        margin-bottom: 20px;
+        color: #314047;
+        font-size: clamp(1.03rem, 1.7vw, 1.22rem);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: #ffffff;
+        color: var(--accent-dark);
+      }
+
+      .quick-card {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .quick-card strong {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 1rem;
+      }
+
+      .stats {
+        display: grid;
+        gap: 10px;
+      }
+
+      .stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .stat:first-child {
+        border-top: 0;
+      }
+
+      .stat span {
+        color: var(--muted);
+      }
+
+      .stat b {
+        color: var(--ink);
+        text-align: right;
+      }
+
+      section {
+        padding: 46px 0 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.55fr);
+        gap: 22px;
+        align-items: end;
+        margin-bottom: 16px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        line-height: 1.04;
+      }
+
+      .section-head p,
+      .muted {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+        gap: 24px;
+      }
+
+      .foldable {
+        background: var(--surface);
+        border: 1px solid var(--line);
+      }
+
+      .foldable summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-height: 68px;
+        padding: 0 24px;
+        color: var(--accent-dark);
+        cursor: pointer;
+        font-weight: 800;
+        list-style: none;
+      }
+
+      .foldable summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .foldable summary::after {
+        content: "+";
+        display: inline-grid;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        color: var(--accent-dark);
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      .foldable[open] summary::after {
+        content: "-";
+      }
+
+      .foldable-body {
+        padding: 0 24px 24px;
+      }
+
+      .panel {
+        padding: 22px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+      }
+
+      .panel.highlight {
+        background: var(--surface-2);
+        border-color: #c8dddd;
+      }
+
+      .panel p:last-child {
+        margin-bottom: 0;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .tag {
+        padding: 8px 10px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        color: var(--accent-dark);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .job {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
+        gap: 24px;
+        padding: 22px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+      }
+
+      .job h3 {
+        margin-bottom: 8px;
+        font-size: 1.45rem;
+      }
+
+      .job-role {
+        margin-bottom: 6px;
+        color: var(--accent-dark);
+        font-weight: 800;
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .bullet-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding-left: 18px;
+        color: #334047;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .skill-card {
+        min-height: 210px;
+        padding: 22px;
+        background: #ffffff;
+      }
+
+      .skill-card h3 {
+        margin-bottom: 14px;
+        color: var(--accent-dark);
+        font-size: 1.12rem;
+      }
+
+      .skill-card ul {
+        display: grid;
+        gap: 9px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: var(--muted);
+      }
+
+      .education {
+        background: var(--paper);
+      }
+
+      .education-card {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
+        gap: 24px;
+        padding: 22px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+      }
+
+      .education-card h3 {
+        margin-bottom: 8px;
+        font-size: 1.45rem;
+      }
+
+      .project-feature {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.68fr);
+        gap: 22px;
+        align-items: stretch;
+        margin-bottom: 18px;
+        padding: 24px;
+        background: var(--ink);
+        color: #ffffff;
+      }
+
+      .project-feature p {
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .tech {
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .project-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 0 14px;
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        color: #ffffff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .project-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .feature-visual {
+        display: grid;
+        align-content: center;
+        gap: 12px;
+        min-height: 230px;
+        padding: 18px;
+        background:
+          linear-gradient(135deg, rgba(18, 107, 103, 0.85), rgba(184, 79, 55, 0.78)),
+          url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80")
+            center / cover;
+      }
+
+      .metric {
+        padding: 14px;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--ink);
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+
+      .web-projects {
+        display: grid;
+        gap: 14px;
+      }
+
+      .web-card {
+        display: grid;
+        grid-template-columns: minmax(240px, 0.52fr) minmax(0, 1fr);
+        gap: 18px;
+        align-items: stretch;
+        padding: 18px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+      }
+
+      .web-card h3 {
+        margin-bottom: 8px;
+        font-size: 1.35rem;
+      }
+
+      .web-card p {
+        margin-bottom: 10px;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .web-card a {
+        color: var(--accent-dark);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .mini-browser {
+        overflow: hidden;
+        min-height: 210px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+      }
+
+      .browser-bar {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        height: 34px;
+        padding: 0 12px;
+        border-bottom: 1px solid var(--line);
+        background: #eef2f2;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #c6ced2;
+      }
+
+      .url {
+        overflow: hidden;
+        margin-left: 7px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .site-shot {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        object-position: top center;
+        background: linear-gradient(135deg, #e8efee, #ffffff 48%, #f3dfd8);
+      }
+
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin: 14px 0;
+      }
+
+      .case-item {
+        padding: 12px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+      }
+
+      .case-item strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--ink);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+      }
+
+      .case-item span {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .contact {
+        padding: 38px 0;
+        background: #202529;
+        color: #ffffff;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .contact p {
+        max-width: 700px;
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .contact-links a {
+        padding: 10px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        color: #ffffff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      @media (max-width: 930px) {
+        .hero-grid,
+        .section-head,
+        .about-grid,
+        .job,
+        .education-card,
+        .project-feature,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .web-card {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .nav-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding: 14px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+
+        .hero {
+          padding: 42px 0 32px;
+        }
+
+        section {
+          padding: 36px 0 0;
+        }
+
+        .skills-grid,
+        .case-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .panel,
+        .job,
+        .project-feature {
+          padding: 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav" aria-label="Navegacion principal">
+      <div class="container nav-inner">
+        <a class="brand" href="#inicio">Portafolio</a>
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#formacion">Formacion</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Cybersecurity | Data Analytics | Software Development</p>
+          <h1>Jordy Oliver Flores Loayza</h1>
+          <p class="role">
+            Information Systems Engineering Student | Cybersecurity & Data Analyst
+          </p>
+          <p class="hero-copy">
+            Estudiante de Ingenieria de Sistemas de Informacion con experiencia
+            en ciberseguridad, analisis de datos y desarrollo de software. He
+            trabajado en entornos corporativos realizando gestion de accesos,
+            monitoreo de seguridad, automatizacion y analisis de datos mediante
+            SQL y Power BI.
+          </p>
+          <div class="actions">
+            <a class="button" href="#proyectos">Ver Proyectos</a>
+            <a
+              class="button secondary"
+              href="https://drive.google.com/file/d/13sZk8JnOsAGDkcBmWWMfYPJrE_aTjT0v/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >Descargar CV</a>
+            <a class="button secondary" href="https://wa.me/51986647170" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a class="button secondary" href="mailto:jordy.oliver.flores.loayza@gmail.com">Mail</a>
+          </div>
+        </div>
+
+        <aside class="quick-card" aria-label="Datos rapidos">
+          <strong>Datos rapidos</strong>
+          <div class="stats">
+            <div class="stat"><span>Experiencia profesional</span><b>4+ anos</b></div>
+            <div class="stat"><span>Empresas</span><b>AFP Habitat / TREM Group</b></div>
+            <div class="stat"><span>Avance academico</span><b>97%</b></div>
+            <div class="stat"><span>Ingles</span><b>B2</b></div>
+            <div class="stat"><span>Especializacion</span><b>Gestión de Seguridad de la Información</b></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+<!--       <section id="sobre-mi">
+        <div class="container">
+          <div class="section-head">
+            <h2>Sobre mi</h2>
+            <p>
+              Mi perfil combina seguridad, datos, desarrollo y criterio de
+              negocio para construir soluciones tecnicas con impacto practico.
+            </p>
+          </div>
+
+          <details class="foldable">
+            <summary>Ver perfil profesional y enfoque tecnico</summary>
+            <div class="foldable-body">
+              <div class="about-grid">
+                <div class="panel">
+                  <p>
+                    Me interesa el area de ciberseguridad, analisis de datos y
+                    automatizacion de procesos. Tengo experiencia trabajando con
+                    herramientas de seguridad, extraccion y visualizacion de
+                    datos, asi como desarrollo de soluciones web orientadas a
+                    negocio.
+                  </p>
+                  <p>
+                    Mi experiencia combina seguridad de la informacion, analisis
+                    de datos y desarrollo de software, permitiendome entender
+                    tanto la parte tecnica como los objetivos de negocio.
+                  </p>
+                </div>
+
+                <div class="panel highlight">
+                  <strong>Enfoque profesional</strong>
+                  <div class="tag-list">
+                    <span class="tag">Security Operations</span>
+                    <span class="tag">Data-Driven Solutions</span>
+                    <span class="tag">Process Automation</span>
+                    <span class="tag">Web Development</span>
+                    <span class="tag">Business-Oriented Tech</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section> -->
+
+      <section id="experiencia">
+        <div class="container">
+          <div class="section-head">
+            <h2>Experiencia profesional</h2>
+<!--             <p>
+              Experiencia en entornos corporativos, seguridad de informacion,
+              desarrollo web, automatizacion y analisis de metricas.
+            </p> -->
+          </div>
+
+          <div class="timeline">
+            <article class="job">
+              <div>
+                <h3>AFP Habitat</h3>
+                <p class="job-role">Auxiliar de Seguridad de Informacion y Continuidad</p>
+                <p class="date">2018 - 2022</p>
+              </div>
+              <ul class="bullet-list">
+                <li>Gestion de accesos con Active Directory.</li>
+                <li>Apoyo en controles SGSI y continuidad.</li>
+                <li>Participacion en gestion de incidentes.</li>
+                <li>Cumplimiento normativo SBS G140.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div>
+                <h3>TREM Group</h3>
+                <p class="job-role">Front-End Developer / Marketing Developer</p>
+                <p class="date">2020 - 2024</p>
+              </div>
+              <ul class="bullet-list">
+                <li>Desarrollo de interfaces web responsive.</li>
+                <li>Integracion con Google Analytics y CRM.</li>
+                <li>Automatizacion con Google Tag Manager.</li>
+                <li>Consultas SQL y analisis de metricas.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+<!--       <section id="skills">
+        <div class="container">
+          <div class="section-head">
+            <h2>Skills y tecnologias</h2>
+            <p>
+              Tecnologias agrupadas por area para mostrar un perfil claro y
+              facil de leer para reclutadores y equipos tecnicos.
+            </p>
+          </div>
+
+          <details class="foldable">
+            <summary>Ver stack tecnico por area</summary>
+            <div class="foldable-body">
+              <div class="skills-grid">
+                <article class="skill-card">
+                  <h3>Cybersecurity</h3>
+                  <ul>
+                    <li>SIEM</li>
+                    <li>DLP</li>
+                    <li>IDS / IPS</li>
+                    <li>Active Directory</li>
+                    <li>Firewall</li>
+                  </ul>
+                </article>
+
+                <article class="skill-card">
+                  <h3>Data & Analytics</h3>
+                  <ul>
+                    <li>SQL</li>
+                    <li>Power BI</li>
+                    <li>Excel</li>
+                    <li>ETL</li>
+                  </ul>
+                </article>
+
+                <article class="skill-card">
+                  <h3>Development</h3>
+                  <ul>
+                    <li>JavaScript</li>
+                    <li>HTML / CSS</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>Git</li>
+                  </ul>
+                </article>
+
+                <article class="skill-card">
+                  <h3>Automation</h3>
+                  <ul>
+                    <li>Power Automate</li>
+                    <li>Zapier</li>
+                    <li>Google Tag Manager</li>
+                    <li>Workflow Optimization</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section> -->
+
+      <section id="formacion" class="education">
+        <div class="container">
+          <div class="section-head">
+            <h2>Formacion y certificaciones</h2>
+<!--             <p>
+              Base academica en sistemas de informacion complementada con
+              certificaciones en ciberseguridad, ciencia de datos y backend.
+            </p> -->
+          </div>
+
+          <article class="education-card">
+            <div>
+              <h3>Universidad Peruana de Ciencias Aplicadas</h3>
+              <p class="job-role">Ingenieria de Sistemas de Informacion</p>
+              <p class="date">Decimo ciclo | 97% de avance academico | Quinto Superior</p>
+            </div>
+
+            <ul class="bullet-list">
+              <li>IBM Cybersecurity Analyst - Especializacion profesional.</li>
+              <li>IBM Data Science Professional Certificate - Analisis, ciencia de datos y modelos.</li>
+              <li>Oracle Next Education Backend - Desarrollo backend.</li>
+              <li>ISACA / Hxploit - Formacion complementaria en seguridad.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="proyectos">
+        <div class="container">
+          <div class="section-head">
+            <h2>Proyectos</h2>
+<!--             <p>
+              Proyectos que muestran aplicacion practica de seguridad, analisis
+              de datos, automatizacion y desarrollo web.
+            </p> -->
+          </div>
+
+          <article class="project-feature">
+            <div>
+              <p class="eyebrow">Proyecto estrella</p>
+              <h3>Sistema IDS basado en Machine Learning</h3>
+              <p>
+                Sistema de deteccion de intrusiones orientado a redes educativas
+                peruanas utilizando Zeek, Machine Learning y analisis de trafico
+                de red en tiempo real.
+              </p>
+              <p>
+                El proyecto integra captura y analisis de eventos de red,
+                procesamiento de datos, modelos de clasificacion y visualizacion
+                de resultados para apoyar la deteccion temprana de amenazas.
+              </p>
+              <div class="tech-list" aria-label="Tecnologias del proyecto IDS">
+                <span class="tech">Python</span>
+                <span class="tech">Zeek</span>
+                <span class="tech">Random Forest</span>
+                <span class="tech">XGBoost</span>
+                <span class="tech">CNN</span>
+                <span class="tech">SQL</span>
+                <span class="tech">Power BI</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://github.com/TP-Flores-Vargas/TP-Flores-Vargas"
+                  target="_blank"
+                  rel="noreferrer"
+                >Ver repositorio</a>
+              </div>
+            </div>
+
+            <div class="feature-visual" aria-label="Resumen funcional del IDS">
+              <div class="metric">
+                <strong>Entrada</strong>
+                Trafico de red y logs generados con Zeek
+              </div>
+              <div class="metric">
+                <strong>Procesamiento</strong>
+                Extraccion de variables y modelos de Machine Learning
+              </div>
+              <div class="metric">
+                <strong>Salida</strong>
+                Alertas, clasificacion y visualizacion en dashboards
+              </div>
+            </div>
+          </article>
+
+          <article class="project-feature">
+            <div>
+              <p class="eyebrow">Machine Learning | Cybersecurity</p>
+              <h3>Intrusion Detection Algorithmic Efficiency with SMOTE + XGBoost</h3>
+              <p>
+                Proyecto de Machine Learning orientado a deteccion de
+                intrusiones en redes mediante tecnicas de balanceo de datos
+                con SMOTE y modelos XGBoost para mejorar la deteccion de
+                trafico malicioso en datasets desbalanceados.
+              </p>
+              <p>
+                El proyecto evalua como tecnicas de balanceo de clases pueden
+                impactar el rendimiento de modelos IDS basados en XGBoost,
+                un problema frecuente en ciberseguridad, fraude y anomaly
+                detection.
+              </p>
+              <div class="tech-list" aria-label="Tecnologias del proyecto SMOTE XGBoost">
+                <span class="tech">Python</span>
+                <span class="tech">XGBoost</span>
+                <span class="tech">SMOTE</span>
+                <span class="tech">Scikit-Learn</span>
+                <span class="tech">Pandas</span>
+                <span class="tech">Machine Learning</span>
+                <span class="tech">Cybersecurity</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="project-link"
+                  href="https://github.com/OliverFloresLoayza/intrusion-detection-algorithmic-efficiency-smote-xgboost"
+                  target="_blank"
+                  rel="noreferrer"
+                >Ver repositorio</a>
+              </div>
+            </div>
+
+            <div class="feature-visual" aria-label="Resumen tecnico del proyecto SMOTE XGBoost">
+              <div class="metric">
+                <strong>Datos</strong>
+                Limpieza y preprocesamiento de trafico de red
+              </div>
+              <div class="metric">
+                <strong>Modelo</strong>
+                Balanceo con SMOTE y entrenamiento XGBoost
+              </div>
+              <div class="metric">
+                <strong>Evaluacion</strong>
+                Analisis de metricas y eficiencia algoritmica en escenarios IDS
+              </div>
+            </div>
+          </article>
+
+          <div class="web-projects" aria-label="Proyectos web inmobiliarios">
+            <article class="web-card">
+              <div class="mini-browser">
+                <div class="browser-bar">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="url">atrluxuryhomes.com</span>
+                </div>
+                <img
+                  class="site-shot"
+                  src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fatrluxuryhomes.com?w=900"
+                  alt="Captura del sitio ATR Luxury Homes"
+                />
+              </div>
+              <div>
+                <p class="eyebrow">Sitio inmobiliario de lujo</p>
+                <h3>ATR Luxury Homes</h3>
+                <p>
+                  Configuracion completa del sitio, adaptacion de contenido del
+                  cliente y desarrollo de funcionalidades personalizadas para
+                  presentar propiedades y contenido audiovisual.
+                </p>
+                <div class="case-grid">
+                  <div class="case-item">
+                    <strong>Problema</strong>
+                    <span>Mostrar propiedades y videos con una experiencia mas flexible.</span>
+                  </div>
+                  <div class="case-item">
+                    <strong>Solucion</strong>
+                    <span>Plugin de galeria de videos y widget dinamico de propiedades.</span>
+                  </div>
+                  <div class="case-item">
+                    <strong>Resultado</strong>
+                    <span>Navegacion mas clara para explorar, visualizar y contactar.</span>
+                  </div>
+                </div>
+                <a href="https://atrluxuryhomes.com" target="_blank" rel="noreferrer">Ver sitio</a>
+              </div>
+            </article>
+
+            <article class="web-card">
+              <div class="mini-browser">
+                <div class="browser-bar">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="url">nancybatchelor.com</span>
+                </div>
+                <img
+                  class="site-shot"
+                  src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnancybatchelor.com?w=900"
+                  alt="Captura del sitio Nancy Batchelor"
+                />
+              </div>
+              <div>
+                <p class="eyebrow">Marca personal inmobiliaria</p>
+                <h3>Nancy Batchelor</h3>
+                <p>
+                  Configuracion completa del sitio y organizacion del contenido
+                  para comunicar trayectoria, autoridad y presencia en medios.
+                </p>
+                <div class="case-grid">
+                  <div class="case-item">
+                    <strong>Problema</strong>
+                    <span>Destacar publicaciones sin afectar la velocidad del sitio.</span>
+                  </div>
+                  <div class="case-item">
+                    <strong>Solucion</strong>
+                    <span>Carrusel de revistas con carga optimizada.</span>
+                  </div>
+                  <div class="case-item">
+                    <strong>Resultado</strong>
+                    <span>Contenido editorial mas ordenado, visual y facil de explorar.</span>
+                  </div>
+                </div>
+                <a href="https://nancybatchelor.com" target="_blank" rel="noreferrer">Ver sitio</a>
+              </div>
+            </article>
+
+            <article class="web-card">
+              <div class="mini-browser">
+                <div class="browser-bar">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="url">nelsongonzalez.com</span>
+                </div>
+                <img
+                  class="site-shot"
+                  src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnelsongonzalez.com?w=900"
+                  alt="Captura del sitio Nelson Gonzalez"
+                />
+              </div>
+              <div>
+                <p class="eyebrow">Sitio inmobiliario personalizado</p>
+                <h3>Nelson Gonzalez</h3>
+                <p>
+                  Configuracion y personalizacion total del sitio, enfocada en
+                  anuncios, propiedades destacadas y acciones de conversion.
+                </p>
+                <div class="case-grid">
+                  <div class="case-item">
+                    <strong>Problema</strong>
+                    <span>Controlar anuncios, listados y CTAs dentro del recorrido.</span>
+                  </div>
+                  <div class="case-item">
+                    <strong>Solucion</strong>
+                    <span>Pop-ups, widget de propiedades y CTAs personalizados.</span>
+                  </div>
+                  <div class="case-item">
+                    <strong>Resultado</strong>
+                    <span>Comunicacion comercial mas directa y rutas de contacto claras.</span>
+                  </div>
+                </div>
+                <a href="https://nelsongonzalez.com" target="_blank" rel="noreferrer">Ver sitio</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto" class="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contacto</h2>
+          <p>
+            Abierto a oportunidades en ciberseguridad, analisis de datos,
+            automatizacion y desarrollo de soluciones web orientadas a negocio.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/OliverFloresLoayza" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://wa.me/51986647170" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="mailto:jordy.oliver.flores.loayza@gmail.com">Mail</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      window.addEventListener("load", () => {
+        if (window.location.hash) {
+          history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </body>
+</html>
